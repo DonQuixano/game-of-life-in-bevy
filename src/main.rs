@@ -421,7 +421,7 @@ fn keyboard_input(
 
     if keys.just_pressed( KeyCode::Slash){
         println!("enter rulestring seperated by slashes: example: 23/3/0/");
-        println!("survive/birth/corpse-lifetime. \n example: 23/3/0/");
+        println!("birth/survive/corpse-lifetime. \n example: 23/3/0/");
 
         let mut NUMERALS: HashSet<char> = HashSet::from(['0','1','2','3','4','5','7','8','9']);
 
@@ -440,8 +440,8 @@ fn keyboard_input(
             //let num = num0.unwrap_or(0) as u8;
             //let mut u8: numCounter = "";
             match state {
-                0 => nullify(Rulestring.survive.insert(num)),
-                1 => nullify(Rulestring.birth.insert(num)),
+                0 => nullify(Rulestring.birth.insert(num)),
+                1 => nullify(Rulestring.survive.insert(num)),
                 2 => {setDecayPlace.push(i); println!("{:?}", num)},
                 _ => {break}
             }
