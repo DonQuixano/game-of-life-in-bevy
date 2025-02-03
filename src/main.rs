@@ -455,7 +455,7 @@ fn keyboard_input(
 
     if keys.just_pressed(KeyCode::Slash) {
         println!("enter rulestring seperated by slashes: example: 3/23/0/");
-        println!("birth/survive/corpse-lifetime. \n example: 2/23/0/");
+        println!("birth/survive/corpse-lifetime. \n example: 3/23/0/");
 
         let mut NUMERALS: HashSet<char> =
             HashSet::from(['0', '1', '2', '3', '4', '5', '7', '8', '9']);
